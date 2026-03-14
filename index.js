@@ -1,20 +1,22 @@
 //RESUELVE LOS EJERCICIOS AQUÍ
 //destructuring-spread-rest
 
-//1
+//1 Dado el objeto **empleados**, extrae la empleada Ana completa.
 const empleados = [
   { name: "Luis", email: "Luis@gmail.com" },
   { name: "Ana", email: "Ana@gmail.com" },
   { name: "Andrea", email: "Andrea@gmail.com" },
 ];
 
-const [{  email: correo },{ name: nombre2, email: correo2 }] = empleados;
-console.log(`{Nombre: ${nombre2}, email: ${correo2}}`);
+/* const [{  email: correo },{ name: ana, email: correo2 }] = empleados; */
+const [, ana] = empleados;
+console.log(`{Nombre: ${ana.name}, email: ${ana.email}}`);
 
 //2.- Dado el objeto **empleados**, extrae el email del empleado Luis --> Luis@gmail.com
-const [{ email: email }] = empleados;
 
-console.log(`\n${email}`);
+const [{ email: emailLuis }] = empleados;
+
+console.log(`\n{email:${emailLuis}}`);
 
 
 //3.- Usa destructuración para cambiar los valores de a y b;
